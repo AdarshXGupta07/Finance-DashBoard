@@ -18,8 +18,12 @@ def main():
     with st.sidebar:
         st.header('Filters')
         # Accounts filter
-        column_options = ['binance', 'gcash', 'grabpay', 'maya', 'ronin', 'seabank', 'shopeepay', 'unionbank', 'wallet', 'net_worth']
-        selected_columns = st.multiselect('Select accounts to display:', column_options, default='net_worth')
+        column_options = [
+            'net_worth', 'wallet', 'unionbank', 'seabank', 'seabank_credit', 'gcash',
+            'maya', 'maya_easy_credit', 'grabpay', 'shopeepay', 'spaylater', 'sloan',
+            'binance', 'ronin', 'bdo', 'bpi', 'borrowed_money', 'loaned_money', 'school_loans'
+        ]
+        selected_columns = st.multiselect('Select accounts to display:', column_options, default=['net_worth'])
         # Views filter
         view = st.radio("Select view:", ["monthly", "weekly", "daily"], index=1, horizontal = True, key = "sidebar")
 
@@ -34,7 +38,7 @@ def main():
                         """ )
             try:
                 personal_finance = Image.open('images/finance.jpg')
-                st.image(personal_finance, caption='Source: LittlePigPower/Shutterstock.com', use_column_width=True)
+                st.image(personal_finance, caption='Source: LittlePigPower/Shutterstock.com', use_container_width=True)
             except FileNotFoundError:
                 st.warning(f"Image not found")
 
@@ -55,7 +59,7 @@ def main():
                         """ )
             try:
                 architecture_diagram = Image.open('images/Architecture Diagram.jpg')
-                st.image(architecture_diagram, caption='Technologies used', use_column_width=True)
+                st.image(architecture_diagram, caption='Technologies used', use_container_width=True)
             except FileNotFoundError:
                 st.warning(f"Image not found")
 
