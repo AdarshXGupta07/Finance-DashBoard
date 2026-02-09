@@ -1,0 +1,11 @@
+Type,Date,Name,Amount,Currency,Category,Account,Status
+Income,2024-01-01,Salary,5000,PHP,Salary,BDO,Reconciled
+Expense,2024-01-02,Groceries,150,PHP,Food,Wallet,Reconciled
+Expense,2024-01-03,Transport,50,PHP,Transportation,GCash,Reconciled
+Income,2024-01-15,Freelance,1000,PHP,Freelance,BPI,Reconciled
+Expense,2024-01-20,Utilities,200,PHP,Utilities,Maya,Reconciled
+Expense,2024-01-25,Entertainment,100,PHP,Entertainment,GrabPay,Reconciled
+Income,2024-02-01,Salary,5000,PHP,Salary,BDO,Reconciled
+Expense,2024-02-05,Groceries,180,PHP,Food,Wallet,Reconciled
+Expense,2024-02-10,Shopping,300,PHP,Shopping,ShopeePay,Reconciled
+Expense,2024-02-15,Restaurant,120,PHP,Food,SeaBank,Reconciled
