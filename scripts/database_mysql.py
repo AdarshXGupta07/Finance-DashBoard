@@ -1,6 +1,10 @@
 import pandas as pd
 from sqlalchemy import create_engine, text
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 def get_mysql_connection():
     """Create MySQL database connection"""
@@ -11,7 +15,11 @@ def get_mysql_connection():
     db_port = os.getenv('MYSQL_PORT', '3306')
     db_name = os.getenv('MYSQL_DATABASE', 'personal_finance_dashboard')
     
-    return f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+    # URL-encode the password to handle special characters
+    from urllib.parse import quote_plus
+    encoded_password = quote_plus(db_password)
+    
+    return f"mysql+pymysql://{db_user}:{encoded_password}@{db_host}:{db_port}/{db_name}"
 
 def extract(file):
     """

@@ -1,0 +1,11 @@
+Type,Date,Name,Amount,Currency,Category,Account,Status
+Expense,2024-01-15,Grocery Store,2500.00,PHP,Food & Dining,Wallet,Reconciled
+Income,2024-01-16,Monthly Salary,50000.00,PHP,Salary,BDO,Reconciled
+Expense,2024-01-17,Restaurant Dinner,1200.00,PHP,Food & Dining,GCash,Reconciled
+Expense,2024-01-18,Gas Station,2000.00,PHP,Transportation,Union Bank,Reconciled
+Expense,2024-01-19,Netflix Subscription,369.00,PHP,Entertainment,Maya,Reconciled
+Transfer,2024-01-20,Load GCash,5000.00,PHP,Transfer,BDO,Reconciled
+Expense,2024-01-21,Online Shopping,2800.00,PHP,Shopping,ShopeePay,Reconciled
+Income,2024-01-22,Freelance Project,15000.00,PHP,Freelance,GCash,Reconciled
+Expense,2024-01-23,Coffee Shop,180.00,PHP,Food & Dining,Wallet,Reconciled
+Expense,2024-01-24,Electric Bill,2500.00,PHP,Bills & Utilities,BPI,Reconciled

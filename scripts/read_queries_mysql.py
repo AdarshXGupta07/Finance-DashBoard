@@ -1,9 +1,14 @@
 import pandas as pd
+import os
 from sqlalchemy import create_engine
 from database_mysql import get_mysql_connection
 
 def read_query(query_name):
-    with open("queries_mysql.sql", 'r') as file:
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    query_file_path = os.path.join(script_dir, "queries_mysql.sql")
+    
+    with open(query_file_path, 'r') as file:
         content = file.read()
 
     queries = [q.strip() for q in content.split('--@name:')]

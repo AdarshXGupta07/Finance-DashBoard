@@ -3,6 +3,11 @@ from read_queries_mysql import query
 import streamlit as st
 import plotly.express as px
 from PIL import Image
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
 
 def main():
     # ----- PAGE SETUP -----

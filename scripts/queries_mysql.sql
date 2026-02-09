@@ -7,13 +7,13 @@ SELECT * FROM transactions;
 --@name: monthly_amount_over_time
 WITH monthly_data AS (
     SELECT
-        DATE_FORMAT(date, '%Y-%m') AS month,
+        DATE_FORMAT(date, '%%Y-%%m') AS month,
         account,
         ROUND(SUM(amount)) AS amount
     FROM
         transactions
     GROUP BY 
-        DATE_FORMAT(date, '%Y-%m'), account
+        DATE_FORMAT(date, '%%Y-%%m'), account
 )
 SELECT
     month,
@@ -137,29 +137,29 @@ ORDER BY
 
 --@name: monthly_expenses
 SELECT
-    DATE_FORMAT(date, '%m %Y') AS month,
+    DATE_FORMAT(date, '%%m %%Y') AS month,
     ROUND(ABS(SUM(amount))) AS expenses
 FROM 
     transactions
 WHERE
     type = 'Expense'
 GROUP BY
-    DATE_FORMAT(date, '%Y-%m')
+    DATE_FORMAT(date, '%%Y-%%m')
 ORDER BY
-    DATE_FORMAT(date, '%Y-%m');
+    DATE_FORMAT(date, '%%Y-%%m');
 
 --@name: monthly_income
 SELECT
-    DATE_FORMAT(date, '%m %Y') AS month,
+    DATE_FORMAT(date, '%%m %%Y') AS month,
     ROUND(SUM(amount)) AS income
 FROM
     transactions
 WHERE
     type = 'Income'
 GROUP BY
-    DATE_FORMAT(date, '%Y-%m')
+    DATE_FORMAT(date, '%%Y-%%m')
 ORDER BY 
-    DATE_FORMAT(date, '%Y-%m');
+    DATE_FORMAT(date, '%%Y-%%m');
 
 --@name: weekly_expenses
 SELECT
